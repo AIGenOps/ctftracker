@@ -1,0 +1,510 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CTFtime.org / cruXipher 2026 - ATMoS &#39;26, BITS Hyderabad</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+<meta property="og:title" content="cruXipher 2026 - ATMoS &#39;26, BITS Hyderabad" />
+<meta property="og:type" content="profile" />
+<meta property="og:url" content="https://ctftime.org/event/3369/" />
+
+<meta property="og:image" content="https://ctftime.org/media/events/cruX_logo_1.png" />
+
+<meta name="description" content="cruXipher: A development-style Capture-the-Flag competition where teams of people come together to solve challenges t...">
+
+    <meta name="author" content="ctftime team">
+
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/static/css/typeahead.bootstrap.css" rel="stylesheet"/>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/static/images/ctftime-logo-avatar.png">
+    <meta name="apple-mobile-web-app-title" content="CTFtime">
+    <meta name="application-name" content="CTFtime">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.formset.js"></script>
+    
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lfl-uUUAAAAAFgA71MPRAPNGt8xQjV2C30BsoXT'></script>
+
+    
+<link rel="canonical" href="https://ctftime.org/event/3369/" />
+    
+    <script>
+        function setCommentToken(token) {
+            setTimeout(function () {
+                document.querySelectorAll('form[action*="comment"] input.django-recaptcha-hidden-field').forEach(function (input) {
+                    input.value = token;
+                });
+            }, 1000);
+        }
+        
+        function setTeamToken(token) {
+            setTimeout(function () {
+                document.querySelectorAll('form[action*="participate"] input.django-recaptcha-hidden-field').forEach(function (input) {
+                    input.value = token;
+                });
+            }, 1000);
+        }
+    </script>
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lfl-uUUAAAAAFgA71MPRAPNGt8xQjV2C30BsoXT'></script>
+
+    <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lfl-uUUAAAAAFgA71MPRAPNGt8xQjV2C30BsoXT', {action: 'comment'}).then(function(token) {
+    document.querySelectorAll('input.django-recaptcha-hidden-field').forEach(function (value) {
+        value.value = token;
+    });
+    return token;
+}).then(function(token) {
+    window["setCommentToken"](token);
+})
+    });
+</script>
+
+    <script>
+    grecaptcha.ready(function() {
+        grecaptcha.execute('6Lfl-uUUAAAAAFgA71MPRAPNGt8xQjV2C30BsoXT', {action: 'team'}).then(function(token) {
+    document.querySelectorAll('input.django-recaptcha-hidden-field').forEach(function (value) {
+        value.value = token;
+    });
+    return token;
+}).then(function(token) {
+    window["setTeamToken"](token);
+})
+    });
+</script>
+
+
+    <link href="/static/css/ctftime6.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/cookieconsent.min.css" />
+    <script src="/static/js/cookieconsent.min.js"></script>
+    <script>
+        if (document.domain != "ctftime.org" && document.domain != "translate.googleusercontent.com"
+            && document.domain != "translate.baiducontent.com" && document.domain != "z5h64q92x9.net") {
+            window.location.replace("https://ctftime.org");
+        }
+    </script>
+    <!--<script data-ad-client="ca-pub-5718474707752821" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  </head>
+
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="//ctftime.org/"><img src="/static/images/ct/logo.svg" alt="CTFtime.org" border="0" width="191px" /></a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/ctfs">CTFs</a></li>
+              <li><a href="/event/list/upcoming">Upcoming</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/event/list/past">Past events</a></li>
+                  <li><a href="/tasks/">Tasks</a></li>
+                  <li><a href="/writeups">Writeups</a></li>
+                  </ul>
+              </li>
+              <li><a href="/calendar/">Calendar</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/stats/">Rating</a></li>
+                  <li><a href="/team/compare">Compare</a></li>
+                  <li><a href="/team/new/">Create new team</a></li>
+                  <li><a href="/dating">Get team members</a></li>
+                  </ul>
+              </li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact us  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/event/mail">For organizers</a></li>
+                  <li><a href="/feedback">Feedback</a></li>
+                  </ul>
+              </li>
+              <li><a href="/about/">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+            
+            <li class="divider-vertical"></li>
+                
+                <li><a href="#loginModal" data-toggle="modal">Sign in</a></li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="/ctfs">CTFs</a> <span class="divider">/</span></li>
+    <li><a href="/event/list/">Events</a> <span class="divider">/</span></li>
+    <li class="active">cruXipher</li>
+</ul>
+
+
+    <div class="container">
+
+    
+
+    
+
+
+<div class="page-header">
+<h2>cruXipher 2026 - ATMoS &#39;26, BITS Hyderabad</h2>
+</div>
+
+<div class="row">
+<div class="span10">
+
+
+<p>
+Fri, 23 Oct. 2026, 00:30 UTC &mdash; Sun, 25 Oct. 2026, 00:30 UTC&nbsp;<a href="/event/3369.ics" rel="tooltip" id="calendar"><img src="/static/img/icon_cal.svg" class="svg_icon" id="icon_calendar"></a>
+</p>
+
+<p><b>On-line</b></p>
+<p></p>
+<p>A&nbsp;<a href="/ctf/1004">cruXipher</a> event.</p>
+<p>Format: Jeopardy&nbsp;<img src="/static/images/ct/1.png" alt="Jeopardy" border="0" /></p>
+<p>Official URL: <a href="https://cruxipher.crux-bphc.com/" rel="nofollow">https://cruxipher.crux-bphc.com/</a></p>
+
+
+
+
+    
+    
+    
+        
+            <p>Future weight: to be determined <a href="/faq/#weight"><i class="icon-question-sign" id="current_weight"></i></a></p>
+        
+    
+    
+    <p>Rating weight: 0.00&nbsp;<a href="/faq/#weight"><i class="icon-question-sign" id="effective_weight"></i></a></p>
+
+
+
+
+
+
+
+
+
+
+
+
+<b>Event organizers&nbsp;<a href="/for-organizers/" id="organizers" rel="tooltip"><i class="icon-question-sign"></i></a></b>
+<ul>
+
+<li><a href="/team/270645">CRUx BPHC</a></li>
+
+</ul>
+
+
+<div>
+<br/>
+        <!-- Go to www.addthis.com/dashboard to customize your tools -->
+        <script type="text/javascript" src="//s7.addthis.com/js/300/addthis_widget.js#pubid=ra-5e8866294de84cf7"></script>
+        <div class="addthis_inline_share_toolbox_ioch"></div>
+        <!-- AddThis Button END -->
+</div>
+
+</div>
+<div class="span2">
+
+
+
+    <img src="/media/cache/13/dd/13dd96931a792706adc0c0d1c9338623.png" width="150" height="150">
+
+
+</div>
+</div>
+
+
+
+
+<div class="well" id="id_description">
+
+<p>cruXipher: A development-style Capture-the-Flag competition where teams of people come together to solve challenges that involve the skills of problem-solving, programming, cybersecurity, and general knowledge of computers to rise to the top.</p>
+
+</div>
+
+
+
+<h3>Prizes</h3>
+<div class="well">
+<p>- 1st Place: 15,000 INR<br />- 2nd Place: 9,000 INR<br />- 3rd Place: 6,000 INR</p>
+
+</div>
+
+
+
+
+
+
+
+<div class="well">
+
+    <div align="right">
+        <a href="#loginModal" data-toggle="modal">Sign in</a> and <a href="/team/new/">register a team</a> to mark your interest.
+    
+    </div>
+
+
+
+
+    
+    
+    <h3>Interested teams</h3>
+    <p align="right">41 teams total</p>
+    <table class="table table-striped">
+    <tr><th>Team</th></tr>
+        
+        <tr><td><a href="/team/393792">FPT DarkHotel</a></td></tr>
+        
+        <tr><td><a href="/team/447661">403 Forbidden_0x</a></td></tr>
+        
+        <tr><td><a href="/team/446051">Agadashi III</a></td></tr>
+        
+        <tr><td><a href="/team/440994">Ang00tha_Chap👌</a></td></tr>
+        
+        <tr><td><a href="/team/451462">Burmalda Team</a></td></tr>
+        
+        <tr><td><a href="/team/452354">C4CAT</a></td></tr>
+        
+        <tr><td><a href="/team/449804">cờ lon</a></td></tr>
+        
+        <tr><td><a href="/team/438599">Crazys_Crack</a></td></tr>
+        
+        <tr><td><a href="/team/451858">dodik team)))</a></td></tr>
+        
+        <tr><td><a href="/team/452108">EARTH-278</a></td></tr>
+        
+        <tr><td><a href="/team/447237">Err_or</a></td></tr>
+        
+        <tr><td><a href="/team/409196">Ç_Ç CyberDimension</a></td></tr>
+        
+        <tr><td><a href="/team/446150">GH0$T$H3LL</a></td></tr>
+        
+        <tr><td><a href="/team/438630">H5X</a></td></tr>
+        
+        <tr><td><a href="/team/451505">HUNTR!X</a></td></tr>
+        
+        <tr><td><a href="/team/450877">ITS DONE BRO</a></td></tr>
+        
+        <tr><td><a href="/team/451747">Krafton</a></td></tr>
+        
+        <tr><td><a href="/team/425475">localhost969</a></td></tr>
+        
+        <tr><td><a href="/team/452375">Lucky Albanians</a></td></tr>
+        
+        <tr><td><a href="/team/150325">M1dnytExplo17z</a></td></tr>
+        
+        <tr><td><a href="/team/451131">MAVI</a></td></tr>
+        
+        <tr><td><a href="/team/443379">MDC CTF</a></td></tr>
+        
+        <tr><td><a href="/team/396944">noerr</a></td></tr>
+        
+        <tr><td><a href="/team/431085">normaluser</a></td></tr>
+        
+        <tr><td><a href="/team/449703">nulldrift</a></td></tr>
+        
+        <tr><td><a href="/team/54605">PersianCats</a></td></tr>
+        
+        <tr><td><a href="/team/404959">Phantom_Protocol</a></td></tr>
+        
+        <tr><td><a href="/team/451412">PWN Tavern</a></td></tr>
+        
+        <tr><td><a href="/team/390601">pwn0rDi3</a></td></tr>
+        
+        <tr><td><a href="/team/426448">r3b0rnsh4d0ws</a></td></tr>
+        
+        <tr><td><a href="/team/444522">RUY</a></td></tr>
+        
+        <tr><td><a href="/team/380166">Pegasu$</a></td></tr>
+        
+        <tr><td><a href="/team/451487">Sw@mexpErt</a></td></tr>
+        
+        <tr><td><a href="/team/450305">TH1</a></td></tr>
+        
+        <tr><td><a href="/team/451201">The Tarot Club</a></td></tr>
+        
+        <tr><td><a href="/team/446744">Unknown Security</a></td></tr>
+        
+        <tr><td><a href="/team/452394">Vois kernel</a></td></tr>
+        
+        <tr><td><a href="/team/449800">WeWereNeverAsked (we just did it)</a></td></tr>
+        
+        <tr><td><a href="/team/448268">ZeroAtermis</a></td></tr>
+        
+        <tr><td><a href="/team/415603">ZeroBlink</a></td></tr>
+        
+        <tr><td><a href="/team/446590">ZeroDay_404</a></td></tr>
+        
+    </table>
+    
+    
+
+
+
+
+
+
+<div class="page-header">
+<h3>Comments</h3>
+</div>
+
+
+
+
+
+
+
+
+<a href="#loginModal" data-toggle="modal">Sign in</a> to comment.
+
+
+<script>
+$(function () {
+    $('table.past_event_rating tr.member').tooltip({ placement : 'top', title: 'Your team!'});
+    $('#calendar').tooltip({ placement : 'right', title: 'Export to your calendar'});
+    $('#progress').tooltip({ placement : 'right', title: 'In progress'});
+    $('#current_weight').tooltip({ placement : 'right', title: 'This weight will be used in first and next years rating'});
+    $('#effective_weight').tooltip({ placement : 'right', title: 'This weight is used in current rating'});
+    $('#organizers').tooltip({ placement : 'right', title: 'Task authors'});
+    $('#weight_voting').tooltip({ placement : 'right', title: 'Weight voting in progress'});
+})
+</script>
+
+
+
+        <div class="modal hide fade" id="loginModal">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">x</button>
+        <h3>Sign in with</h3>
+    </div>
+    <div class="modal-body" align="center">
+        <a href="/login/google-oauth2/?next=/event/3369"><img src="/static/images/google.svg" class="icon_logon" alt="Enter using Google" /></a>
+        <a href="/login/twitter/?next=/event/3369"><img src="/static/images/twitter.svg"  class="icon_logon" alt="Enter using Twitter" /></a>
+        <a href="/login/facebook/?next=/event/3369"><img src="/static/images/facebook.svg"  class="icon_logon" alt="Enter using Facebook" /></a>
+        <a href="/login/github/?next=/event/3369"><img src="/static/images/github.svg"  class="icon_logon" alt="Enter using Github" /></a>
+        <p><a href="/amnesia">I don't remember</a></p>
+    </div>
+    </div>
+
+
+  <div class="row">
+    <div class="span4">
+    </div>
+  </div>
+
+    </div>
+
+
+    <footer class="footer">
+    <div class="container">
+      <p class="pull-right"><a href="//twitter.com/CTFtime" class="twitter-follow-button" data-show-count="false">Follow @CTFtime</a> </p>
+      <p>&copy; 2012 &mdash; 2026 CTFtime team.</p><p>All tasks and writeups are copyrighted by their respective authors. <a href="/privacy">Privacy Policy</a>.<br/>
+    Hosting provided by <a href="http://www.transdata.no/">Transdata</a>.</p>
+    </div>
+    </footer>
+
+
+    <script src="/static/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-dropdown.js"></script>
+<!--    <script src="/static/bootstrap/js/bootstrap-scrollspy.js"></script>-->
+    <script src="/static/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-button.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-collapse.js"></script>
+<!--    <script src="/static/bootstrap/js/bootstrap-carousel.js"></script>-->
+    <script src="/static/js/typeahead_f.js"></script>
+
+    <script type="text/javascript">
+        $('.dropdown-toggle').dropdown();
+
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#efefef",
+                        "text": "#404040"
+                    },
+                    "button": {
+                        "background": "#fb0505"
+                    }
+                },
+                "position": "bottom-right",
+                "content": {
+                    "message": "This website uses cookies to manage authentication, for analytics, and other functions.",
+                    "link": "Privacy policy",
+                    "href": "https://ctftime.org/privacy"
+                }
+            })
+        });
+    </script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14236711 = new Ya.Metrika({id:14236711, enableAll: true, webvisor:true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/14236711" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-559211-27']);
+  _gaq.push(['_setDomainName', 'ctftime.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
