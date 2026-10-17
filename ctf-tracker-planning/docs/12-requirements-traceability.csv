@@ -1,0 +1,22 @@
+Requirement ID,Requirement,Primary component,Validation / test
+FR-01,Detect supported CTFtime events,Content detector and CTFtime parser,T-001 T-002 T-003 T-004
+FR-01,Detect supported external sites,External detector,T-029
+FR-01,Manual capture,Popup/dashboard and event repository,T-029
+FR-02,Top-right prompt,Content prompt,T-005 T-006 T-007
+FR-02,Re-prompt after dismissal,Prompt state handling,T-006
+FR-02,Show saved status,Content prompt and repository,T-007 T-028
+FR-03,Store editable event details,Event schema and repository,T-003 T-010
+FR-04,Five participation states,Status model and UI,T-011
+FR-04,Separate lifecycle,Event lifecycle model,T-016 T-019
+FR-05,Four start reminders,Alarm manager,T-012 T-014 T-017
+FR-05,Deadline reminder,Alarm manager,T-013 T-015
+FR-05,Event-end reminder,Alarm manager,T-015 T-016
+FR-05,No duplicate notifications,Delivery history,T-008 T-017
+FR-05,Reconcile after worker restart,Service worker and alarm manager,T-017
+FR-06,Popup quick actions,Popup UI,T-028
+FR-07,Full dashboard management,Dashboard UI,T-028
+FR-08,JSON export,Backup module,T-025
+FR-08,Validated merge import,Backup module,T-022 T-023 T-024 T-025
+NFR-Privacy,Local-first storage,Event repository and permissions,Security review
+NFR-Security,Validate untrusted data,Parser/import/message validation,T-026 T-027
+NFR-Compatibility,Chromium support,Build and QA matrix,Manual browser test report

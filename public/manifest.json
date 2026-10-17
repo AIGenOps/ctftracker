@@ -1,0 +1,44 @@
+{
+  "manifest_version": 3,
+  "name": "CTF Tracker",
+  "version": "2.0.0",
+  "description": "Detects CTF competitions, tracks participation, and delivers timely start and deadline reminders.",
+  "key": "MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEA8DBfnMAz51Y8UDtGTnkWPrqnN4JW7JH7d8djqFSnrGrthfE/HF8GPvgMk4jcwo+6rx23BVR08BU1Z5hnHOcEtE8UYQwigq68BCGkHW7NrWaCb6Q21FEp2JryaFqGMbLompMbcSaAHpwxxCLF9rvLz1Rt7wA0vNg5UqfKjUYpIcd3Y0DBNXdEnf7gt06cAz6sEImTdTCIhi43M3Qa+JlEELdgpOb7DXP2t5TTBvXD0aDqMOnh+Wn5bNN7SFpD+WisMpzTIaThk/DBDi6cHiRMydD7HfpxBp8GH+1u3q4VHdpYLQwoRo4KWvLr0Zfo3V9k+e4WDxLF/8vZqQ0UcQKBIwIDAQAB",
+  "icons": {
+    "16": "icons/icon-16.png",
+    "48": "icons/icon-48.png",
+    "128": "icons/icon-128.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "CTF Tracker",
+    "default_icon": {
+      "16": "icons/icon-16.png",
+      "48": "icons/icon-48.png",
+      "128": "icons/icon-128.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://ctftime.org/*",
+        "https://*.ctfd.io/*"
+      ],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "permissions": [
+    "storage",
+    "alarms",
+    "notifications"
+  ],
+  "host_permissions": [
+    "https://ctftime.org/*",
+    "https://*.ctfd.io/*"
+  ]
+}
