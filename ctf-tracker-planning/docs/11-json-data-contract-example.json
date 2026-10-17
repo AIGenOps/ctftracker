@@ -1,0 +1,64 @@
+{
+  "schemaVersion": 1,
+  "exportedAt": "2026-10-17T12:00:00.000Z",
+  "settings": {
+    "automaticPromptsEnabled": true,
+    "timezoneDisplay": "local",
+    "theme": "minimal-dark",
+    "defaultReminderPreferences": {
+      "sevenDays": true,
+      "twentyFourHours": true,
+      "oneHour": true,
+      "fifteenMinutes": true,
+      "deadline": true,
+      "eventEnd": true,
+      "deadlineLeadMinutes": 1440,
+      "endLeadMinutes": 15
+    }
+  },
+  "events": [
+    {
+      "id": "example-event-001",
+      "name": "Example CTF 2026",
+      "status": "planned",
+      "lifecycle": "upcoming",
+      "format": "online",
+      "source": "ctftime",
+      "sourceEventId": "3409",
+      "ctftimeUrl": "https://ctftime.org/event/3409",
+      "websiteUrl": "https://example.invalid/",
+      "registrationUrl": null,
+      "startAt": "2026-10-24T08:30:00.000Z",
+      "endAt": "2026-10-25T08:30:00.000Z",
+      "timezone": "UTC",
+      "registrationDeadlineAt": null,
+      "teamMode": "team",
+      "teamName": "Example Team",
+      "weight": null,
+      "points": null,
+      "notes": "Fictional example record for schema illustration.",
+      "reminderPreferences": {
+        "sevenDays": true,
+        "twentyFourHours": true,
+        "oneHour": true,
+        "fifteenMinutes": true,
+        "deadline": true,
+        "eventEnd": true,
+        "deadlineLeadMinutes": 1440,
+        "endLeadMinutes": 15
+      },
+      "createdAt": "2026-10-17T12:00:00.000Z",
+      "updatedAt": "2026-10-17T12:00:00.000Z",
+      "dismissedPrompt": false,
+      "verifiedFields": [
+        "name",
+        "startAt"
+      ],
+      "fieldSources": {
+        "name": "ctftime",
+        "startAt": "ctftime",
+        "teamName": "manual"
+      }
+    }
+  ]
+}

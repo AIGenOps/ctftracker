@@ -1,0 +1,601 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>CTFtime.org / All about CTF (Capture The Flag)</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="Capture The Flag, CTF teams, CTF ratings, CTF archive, CTF writeups">
+    
+    <meta name="author" content="ctftime team">
+
+    <link href="/static/bootstrap/css/bootstrap.css" rel="stylesheet"/>
+    <link href="/static/css/typeahead.bootstrap.css" rel="stylesheet"/>
+    <style>
+      body {
+        padding-top: 60px; /* 60px to make the container go all the way to the bottom of the topbar */
+      }
+    </style>
+    <link href="/static/bootstrap/css/bootstrap-responsive.css" rel="stylesheet"/>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <link rel="apple-touch-icon" href="/static/images/ctftime-logo-avatar.png">
+    <meta name="apple-mobile-web-app-title" content="CTFtime">
+    <meta name="application-name" content="CTFtime">
+    <meta http-equiv="X-UA-Compatible" content="IE=9">
+
+    <link rel="shortcut icon" type="image/png" href="/favicon.png"/>
+    <script type="text/javascript" src="/static/js/jquery.min.js"></script>
+    <script type="text/javascript" src="/static/js/jquery.formset.js"></script>
+    
+    <script src='https://www.google.com/recaptcha/api.js?render=6Lfl-uUUAAAAAFgA71MPRAPNGt8xQjV2C30BsoXT'></script>
+
+    
+    
+    <link href="/static/css/ctftime6.css" rel="stylesheet"/>
+
+    <link rel="stylesheet" type="text/css" href="/static/css/cookieconsent.min.css" />
+    <script src="/static/js/cookieconsent.min.js"></script>
+    <script>
+        if (document.domain != "ctftime.org" && document.domain != "translate.googleusercontent.com"
+            && document.domain != "translate.baiducontent.com" && document.domain != "z5h64q92x9.net") {
+            window.location.replace("https://ctftime.org");
+        }
+    </script>
+    <!--<script data-ad-client="ca-pub-5718474707752821" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>-->
+  </head>
+
+
+  <body>
+
+    <div class="navbar navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </a>
+          <a class="brand" href="//ctftime.org/"><img src="/static/images/ct/logo.svg" alt="CTFtime.org" border="0" width="191px" /></a>
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li><a href="/ctfs">CTFs</a></li>
+              <li><a href="/event/list/upcoming">Upcoming</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Archive  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/event/list/past">Past events</a></li>
+                  <li><a href="/tasks/">Tasks</a></li>
+                  <li><a href="/writeups">Writeups</a></li>
+                  </ul>
+              </li>
+              <li><a href="/calendar/">Calendar</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Teams  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/stats/">Rating</a></li>
+                  <li><a href="/team/compare">Compare</a></li>
+                  <li><a href="/team/new/">Create new team</a></li>
+                  <li><a href="/dating">Get team members</a></li>
+                  </ul>
+              </li>
+              <li><a href="/faq/">FAQ</a></li>
+              <li class="dropdown">
+                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Contact us  <b class="caret"></b></a>
+                  <ul class="dropdown-menu">
+                  <li><a href="/event/mail">For organizers</a></li>
+                  <li><a href="/feedback">Feedback</a></li>
+                  </ul>
+              </li>
+              <li><a href="/about/">About</a></li>
+            </ul>
+            <ul class="nav pull-right">
+            
+            <li class="divider-vertical"></li>
+                
+                <li><a href="#loginModal" data-toggle="modal">Sign in</a></li>
+                
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    
+
+<ul class="breadcrumb">
+    <li><a href="/">Home</a> <span class="divider">/</span></li>
+    <li><a href="/ctfs">CTFs</a> <span class="divider">/</span></li>
+
+    <li><a href="/event/list/">Events</a> <span class="divider">/</span>
+
+<li class="active">Upcoming</li>
+</ul>
+
+
+    <div class="container">
+
+    
+
+    
+
+<div class="page-header">
+<h2>CTF Events</h2>
+</div>
+
+<ul class="nav nav-pills">
+    <li><a href="/event/list/?year=2026&online=-1&format=0&restrictions=-1">All</a></li>
+    <li><a href="/event/list/?online=-1&format=0&restrictions=-1&now=true">Now running</a></li>
+    <li class="active"><a href="/event/list/?online=-1&format=0&restrictions=-1&upcoming=true">Upcoming</a></li>
+    <li><a href="/event/list/?year=2026&online=-1&format=0&restrictions=-1&archive=true">Archive</a></li>
+
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Format
+        
+        
+        <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li><a href="/event/list/?year=2026&online=-1&format=1&upcoming=true&restrictions=-1">Jeopardy</a></li>
+    <li><a href="/event/list/?year=2026&online=-1&format=2&upcoming=true&restrictions=-1">Attack-Defence</a></li>
+    <li><a href="/event/list/?year=2026&online=-1&format=3&upcoming=true&restrictions=-1">Hack-quest</a></li>
+    </ul>
+    </li>
+
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">
+        Location
+        
+        
+<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li  class="active"><a href="/event/list/?year=2026&online=-1&format=0&restrictions=-1&upcoming=true">All</a></li>
+    <li ><a href="/event/list/?year=2026&online=1&format=0&restrictions=-1&upcoming=true">On-line</a></li>
+    <li ><a href="/event/list/?year=2026&online=0&format=0&restrictions=-1&upcoming=true">On-site</a></li>
+    </ul>
+    </li>
+
+    <li class="dropdown">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#"> 
+        Restrictions
+        
+        
+        
+        
+        
+        
+        
+        <b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=0&upcoming=true">Open</a></li>
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=1&upcoming=true">Prequalified</a></li>
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=2&upcoming=true">Academic</a></li>
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=3&upcoming=true">High-school</a></li>
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=4&upcoming=true">Invited only</a></li>
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=5&upcoming=true">Individual</a></li>
+    <li><a href="/event/list/upcoming?year=2026&online=-1&format=0&restrictions=6&upcoming=true">Casual</a></li>
+    </ul>
+    </li>
+
+    <li class="dropdown active">
+    <a class="dropdown-toggle" data-toggle="dropdown" href="#">2026<b class="caret"></b></a>
+    <ul class="dropdown-menu">
+    
+    <li  class="active"><a href="/event/list/?year=2026&online=-1&format=0&restrictions=-1&upcoming=true">2026</a></li>
+    
+    <li ><a href="/event/list/?year=2025&online=-1&format=0&restrictions=-1&upcoming=true">2025</a></li>
+    
+    <li ><a href="/event/list/?year=2024&online=-1&format=0&restrictions=-1&upcoming=true">2024</a></li>
+    
+    <li ><a href="/event/list/?year=2023&online=-1&format=0&restrictions=-1&upcoming=true">2023</a></li>
+    
+    <li ><a href="/event/list/?year=2022&online=-1&format=0&restrictions=-1&upcoming=true">2022</a></li>
+    
+    <li ><a href="/event/list/?year=2021&online=-1&format=0&restrictions=-1&upcoming=true">2021</a></li>
+    
+    <li ><a href="/event/list/?year=2020&online=-1&format=0&restrictions=-1&upcoming=true">2020</a></li>
+    
+    <li ><a href="/event/list/?year=2019&online=-1&format=0&restrictions=-1&upcoming=true">2019</a></li>
+    
+    <li ><a href="/event/list/?year=2018&online=-1&format=0&restrictions=-1&upcoming=true">2018</a></li>
+    
+    <li ><a href="/event/list/?year=2017&online=-1&format=0&restrictions=-1&upcoming=true">2017</a></li>
+    
+    <li ><a href="/event/list/?year=2016&online=-1&format=0&restrictions=-1&upcoming=true">2016</a></li>
+    
+    <li ><a href="/event/list/?year=2015&online=-1&format=0&restrictions=-1&upcoming=true">2015</a></li>
+    
+    <li ><a href="/event/list/?year=2014&online=-1&format=0&restrictions=-1&upcoming=true">2014</a></li>
+    
+    <li ><a href="/event/list/?year=2013&online=-1&format=0&restrictions=-1&upcoming=true">2013</a></li>
+    
+    <li ><a href="/event/list/?year=2012&online=-1&format=0&restrictions=-1&upcoming=true">2012</a></li>
+    
+    <li ><a href="/event/list/?year=2011&online=-1&format=0&restrictions=-1&upcoming=true">2011</a></li>
+    
+    </ul>
+    </li>
+
+    <div class="pull-right"><a href="/calendar/"><img src="/static/images/icon_cal.svg" class="svg_icon" /></a><a href="/event/list/upcoming/rss/"><img src="/static/images/icon_rss.svg" class="svg_icon" /></a></div>
+</ul>
+
+<table class="table table-striped"><tr><th>Name</th><th>Date</th><th>Format</th><th>Location</th><th>Weight</th><th colspan="2">Notes</th></tr><tr><td><a href="/event/3409">SAS CTF 2026 Finals</a></td><td>20 Oct., 03:00 UTC &mdash; 20 Oct. 2026, 14:00 UTC</td><td>Attack-Defense</td><td>
+
+    Indonesia, Bali
+
+</td><td>49.50</td><td><b>Prequalified teams only</b></td><td><b>0</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3369">cruXipher 2026 - ATMoS &#39;26, BITS Hyderabad</a></td><td>23 Oct., 00:30 UTC &mdash; 25 Oct. 2026, 00:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>41</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3477">CREST CTF 2.0</a></td><td>23 Oct., 05:30 UTC &mdash; 23 Oct. 2026, 11:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0</td><td></td><td><b>Individual</b><tr><td><a href="/event/3340">HITCON CTF 2026</a></td><td>23 Oct., 14:00 UTC &mdash; 25 Oct. 2026, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>91.16</td><td></td><td><b>157</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3377">RSTCON 2026 CTF</a></td><td>23 Oct., 17:00 UTC &mdash; 25 Oct. 2026, 17:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>25.00</td><td></td><td><b>38</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3207">Hack.lu CTF 2026</a></td><td>23 Oct., 18:00 UTC &mdash; 25 Oct. 2026, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>94.74</td><td></td><td><b>110</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3442">Cryovault 2026 Finals</a></td><td>24 Oct., 03:30 UTC &mdash; 25 Oct. 2026, 06:30 UTC</td><td>Jeopardy</td><td>
+
+    Bengaluru, India
+
+</td><td>0.00</td><td></td><td><tr><td><a href="/event/3094">H7CTF 2026 Finals</a></td><td>24 Oct., 06:30 UTC &mdash; 25 Oct. 2026, 06:30 UTC</td><td>Attack-Defense</td><td>
+
+    Chennai, Tamil Nadu
+
+</td><td>0.00</td><td><b>Prequalified teams only</b></td><td><b>11</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3473">BSides Peoria CTF 2026</a></td><td>24 Oct., 14:45 UTC &mdash; 24 Oct. 2026, 20:45 UTC</td><td>Jeopardy</td><td>
+
+    Peoria, Illinois, USA
+
+</td><td>0</td><td><b>Casual</b></td><td><b>2</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3443">Sudocrypt v16.0</a></td><td>27 Oct., 03:30 UTC &mdash; 28 Oct. 2026, 15:30 UTC</td><td>Hack quest</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>14</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3444">Srdnlen CTF 2026 Finals (Sardinia Cyber Camp)</a></td><td>29 Oct., 09:00 UTC &mdash; 29 Oct. 2026, 17:00 UTC</td><td>Jeopardy</td><td>
+
+    Italy, Cagliari
+
+</td><td>25.00</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/3381">Hacker&#39;s Gambit 2026 (Round 2 – Grand Finale)</a></td><td>30 Oct., 06:30 UTC &mdash; 31 Oct. 2026, 06:30 UTC</td><td>Jeopardy</td><td>
+
+    Jaihind College of Engineering,At Post Kuran, Taluka Junnar, Pune - 410511, Maharashtra, India  (19°09&#39;47.2&quot;N 73°54&#39;52.2&quot;E)
+
+</td><td>0.00</td><td><b>Prequalified teams only</b></td><td><b>0</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3460">HI Cyber Con 2026 CTF</a></td><td>30 Oct., 14:00 UTC &mdash; 01 Nov. 2026, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>14</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3459">2026 Qiangwang Challenge on Cyber Mimic Defense Qualification</a></td><td>31 Oct., 02:00 UTC &mdash; 01 Nov. 2026, 02:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>7</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3469">Russian CTF Cup X Qualifier</a></td><td>31 Oct., 09:00 UTC &mdash; 01 Nov. 2026, 09:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>11</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3418">HKCERT CTF 2026 (Qualifying Round)</a></td><td>06 Nov., 10:00 UTC &mdash; 07 Nov. 2026, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>10.31</td><td></td><td><b>24</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3331">PINK+ CTF 2026</a></td><td>06 Nov., 12:00 UTC &mdash; 09 Nov. 2026, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>18</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3333">CSCTF 2026</a></td><td>06 Nov., 13:00 UTC &mdash; 08 Nov. 2026, 13:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>21</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3339">SpookyCTF 2026</a></td><td>06 Nov., 17:00 UTC &mdash; 07 Nov. 2026, 17:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>13</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3242">BlackAlps CTF 2026</a></td><td>06 Nov., 18:15 UTC &mdash; 06 Nov. 2026, 22:30 UTC</td><td>Jeopardy</td><td>
+
+    Switzerland, Yverdon-les-Bains
+
+</td><td>0.00</td><td></td><td><b>11</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3455">Mimic</a></td><td>07 Nov., 12:00 UTC &mdash; 08 Nov. 2026, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0</td><td><b>Casual</b></td><td><b>1</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3410">CSAW CTF Final Round 2026</a></td><td>12 Nov., 17:00 UTC &mdash; 14 Nov. 2026, 05:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>1.00</td><td></td><td><b>11</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3082">Platypwn 2026</a></td><td>13 Nov., 17:00 UTC &mdash; 14 Nov. 2026, 11:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>37.00</td><td></td><td><b>24</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3049">WolvCTF 2026</a></td><td>13 Nov., 23:00 UTC &mdash; 15 Nov. 2026, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>71</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3467">InIt CTF</a></td><td>14 Nov., 15:30 UTC &mdash; 14 Nov. 2026, 23:30 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0</td><td><b>Casual</b></td><td><b>2</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3419">EyesOpenCTF 7th edition</a></td><td>20 Nov., 10:00 UTC &mdash; 22 Nov. 2026, 10:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>8</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3337">GlacierCTF 2026</a></td><td>20 Nov., 18:00 UTC &mdash; 21 Nov. 2026, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>73.17</td><td></td><td><b>27</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3425">Outback Overflow</a></td><td>20 Nov., 23:00 UTC &mdash; 21 Nov. 2026, 23:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>1</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3408">Seize da Flaq</a></td><td>21 Nov., 06:30 UTC &mdash; 22 Nov. 2026, 02:30 UTC</td><td>Jeopardy</td><td>
+
+    Mathura, Uttar Pradesh, India
+
+</td><td>0</td><td><b>Casual</b></td><td><b>16</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3336">Crate-CTF 2026</a></td><td>21 Nov., 13:00 UTC &mdash; 21 Nov. 2026, 21:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>37.00</td><td></td><td><b>10</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3436">CyberSci Regional Qualifiers 2026-27</a></td><td>21 Nov., 15:00 UTC &mdash; 21 Nov. 2026, 22:00 UTC</td><td>Jeopardy</td><td>
+
+    Onsite at 6 locations in Canada
+
+</td><td>0</td><td><b>Academic teams only</b></td><td><b>4</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3474">LakeCTF Quals 26-27</a></td><td>27 Nov., 18:00 UTC &mdash; 28 Nov. 2026, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>45.76</td><td></td><td><b>3</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3386">BlackHat MEA CTF Final 2026</a></td><td>01 Dec., 15:14 UTC &mdash; 03 Dec. 2026, 15:14 UTC</td><td>Jeopardy</td><td>
+
+    Riyadh, Saudi Arabia
+
+</td><td>0.00</td><td><b>Prequalified teams only</b></td><td><tr><td><a href="/event/3450">x3CTF 2026</a></td><td>04 Dec., 18:00 UTC &mdash; 06 Dec. 2026, 18:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>0.00</td><td></td><td><b>1</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3367">niteCTF 2026</a></td><td>11 Dec., 12:00 UTC &mdash; 13 Dec. 2026, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>59.00</td><td></td><td><b>33</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3475">BSides Algiers 2026</a></td><td>17 Dec., 19:00 UTC &mdash; 19 Dec. 2026, 07:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>22.90</td><td></td><td><b>0</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3472">BackdoorCTF 2026</a></td><td>19 Dec., 12:00 UTC &mdash; 20 Dec. 2026, 12:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>77.38</td><td></td><td><b>2</b> teams will participate
+    
+    
+
+
+<tr><td><a href="/event/3062">ASIS CTF Finals 2026</a></td><td>27 Dec., 14:00 UTC &mdash; 28 Dec. 2026, 14:00 UTC</td><td>Jeopardy</td><td>
+On-line
+</td><td>99.38</td><td></td><td></td></tr></table>
+
+
+<script type="text/javascript">
+$(function() {
+    $('#weight_voting').tooltip({ placement : 'right', title: 'Weight voting in progress'});
+});
+</script>
+
+
+        <div class="modal hide fade" id="loginModal">
+    <div class="modal-header">
+        <button class="close" data-dismiss="modal">x</button>
+        <h3>Sign in with</h3>
+    </div>
+    <div class="modal-body" align="center">
+        <a href="/login/google-oauth2/?next=/event/list/upcoming"><img src="/static/images/google.svg" class="icon_logon" alt="Enter using Google" /></a>
+        <a href="/login/twitter/?next=/event/list/upcoming"><img src="/static/images/twitter.svg"  class="icon_logon" alt="Enter using Twitter" /></a>
+        <a href="/login/facebook/?next=/event/list/upcoming"><img src="/static/images/facebook.svg"  class="icon_logon" alt="Enter using Facebook" /></a>
+        <a href="/login/github/?next=/event/list/upcoming"><img src="/static/images/github.svg"  class="icon_logon" alt="Enter using Github" /></a>
+        <p><a href="/amnesia">I don't remember</a></p>
+    </div>
+    </div>
+
+
+  <div class="row">
+    <div class="span4">
+    </div>
+  </div>
+
+    </div>
+
+
+    <footer class="footer">
+    <div class="container">
+      <p class="pull-right"><a href="//twitter.com/CTFtime" class="twitter-follow-button" data-show-count="false">Follow @CTFtime</a> </p>
+      <p>&copy; 2012 &mdash; 2026 CTFtime team.</p><p>All tasks and writeups are copyrighted by their respective authors. <a href="/privacy">Privacy Policy</a>.<br/>
+    Hosting provided by <a href="http://www.transdata.no/">Transdata</a>.</p>
+    </div>
+    </footer>
+
+
+    <script src="/static/bootstrap/js/bootstrap-transition.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-alert.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-modal.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-dropdown.js"></script>
+<!--    <script src="/static/bootstrap/js/bootstrap-scrollspy.js"></script>-->
+    <script src="/static/bootstrap/js/bootstrap-tab.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-tooltip.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-popover.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-button.js"></script>
+    <script src="/static/bootstrap/js/bootstrap-collapse.js"></script>
+<!--    <script src="/static/bootstrap/js/bootstrap-carousel.js"></script>-->
+    <script src="/static/js/typeahead_f.js"></script>
+
+    <script type="text/javascript">
+        $('.dropdown-toggle').dropdown();
+
+        window.addEventListener("load", function () {
+            window.cookieconsent.initialise({
+                "palette": {
+                    "popup": {
+                        "background": "#efefef",
+                        "text": "#404040"
+                    },
+                    "button": {
+                        "background": "#fb0505"
+                    }
+                },
+                "position": "bottom-right",
+                "content": {
+                    "message": "This website uses cookies to manage authentication, for analytics, and other functions.",
+                    "link": "Privacy policy",
+                    "href": "https://ctftime.org/privacy"
+                }
+            })
+        });
+    </script>
+
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript">
+(function (d, w, c) {
+    (w[c] = w[c] || []).push(function() {
+        try {
+            w.yaCounter14236711 = new Ya.Metrika({id:14236711, enableAll: true, webvisor:true});
+        } catch(e) {}
+    });
+    
+    var n = d.getElementsByTagName("script")[0],
+        s = d.createElement("script"),
+        f = function () { n.parentNode.insertBefore(s, n); };
+    s.type = "text/javascript";
+    s.async = true;
+    s.src = (d.location.protocol == "https:" ? "https:" : "http:") + "//mc.yandex.ru/metrika/watch.js";
+
+    if (w.opera == "[object Opera]") {
+        d.addEventListener("DOMContentLoaded", f);
+    } else { f(); }
+})(document, window, "yandex_metrika_callbacks");
+</script>
+<noscript><div><img src="//mc.yandex.ru/watch/14236711" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-559211-27']);
+  _gaq.push(['_setDomainName', 'ctftime.org']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+  </body>
+</html>
